@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lb_2</title>
+
+    <style>
+        input#Number{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+        input#Number:invalid:not(:placeholder-shown){
+            background-color: crimson;
+        }
+        input#Number:valid:not(:placeholder-shown){
+            background-color: chartreuse;
+        }
+        input#Number:required{
+            border: 2px solid gold;
+        }
+        input#Number:invalid:required:not(:placeholder-shown){
+            border: 2px solid white;
+        }
+        input#Number:valid:required:not(:placeholder-shown){
+            border: 2px solid white;
+        }
+
+    </style>
+
+    <link href = "lb_2.css" type = "text/css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<label>
+    <input type="text" placeholder="Text" required style = "position:absolute;
+    top: 50px;
+	left: 50px;">
+</label>
+
+<label>
+    <input required type="number" id = "Number" name = "Number" min="5" placeholder="Numbers > 5">
+</label>
+
+<label>
+    <input type="number" max = "20" required placeholder="Numbers < 20">
+</label>
+
+<div style="position: absolute; top: 35px; left: 300px;">
+    <h3>Формы, обведенные желтым цветом, являются обязательными к заполнению <br><br>
+    Формы, залитые красным цветом, обозначают некорректный ввод<br><br>
+    Формы, залитые зеленым цветом, обозначают корректный ввод</h3>
+</div>
+
+</body>
+</html>
